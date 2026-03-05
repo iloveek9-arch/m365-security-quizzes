@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>公司教育訓練測驗入口</title>
+  <style>
+    :root{--bg:#0b1220;--tile:#0f172a;--tile2:#111827;--text:#e5e7eb;--muted:#9ca3af;--brand:#60a5fa;--accent:#34d399}
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans TC",sans-serif;background:radial-gradient(1200px 600px at 10% -10%,#1e293b,transparent),radial-gradient(1000px 500px at 120% 20%,#0ea5e9,transparent),var(--bg);color:var(--text)}
+    header{max-width:1000px;margin:36px auto 12px;padding:0 16px}
+    h1{margin:0 0 6px;font-size:clamp(22px,3vw,34px);letter-spacing:.3px}
+    .subtitle{color:var(--muted);font-size:14px}
+    main{max-width:1000px;margin:18px auto 48px;padding:0 16px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .tile{position:relative;border-radius:14px;padding:18px 16px;background:linear-gradient(180deg,var(--tile),var(--tile2));border:1px solid rgba(255,255,255,.08);box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .tile h3{margin:0 0 8px;font-size:18px}
+    .tile p{margin:0;color:var(--muted);font-size:14px;min-height:40px}
+    .actions{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+    a.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;border-radius:10px;padding:10px 14px;border:1px solid rgba(255,255,255,.14)}
+    a.primary{background:linear-gradient(180deg,#2563eb,#1d4ed8);color:#fff}
+    a.secondary{background:rgba(255,255,255,.04);color:var(--text)}
+    .pill{display:inline-block;border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:2px 8px;font-size:12px;color:var(--muted)}
+    footer{max-width:1000px;margin:0 auto 40px;padding:0 16px;color:var(--muted);font-size:13px}
+    .hint{margin-top:10px;color:#cbd5e1;font-size:13px}
+    .kbd{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);padding:2px 6px;border-radius:6px}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>公司教育訓練測驗入口</h1>
+    <div class="subtitle">請選擇要進行的測驗卷別；作答完成後成績會自動記錄到指定的 Google 試算表。</div>
+  </header>
+  <main>
+    <div class="grid">
+      <article class="tile">
+        <div class="pill">114 / 11｜保全戊卷</div>
+        <h3>防範電器火災</h3>
+        <p>10 題是非、10 題單選；滿分 100、及格 60。含詳解、可下載 CSV。</p>
+        <div class="actions">
+          <a class="btn primary" href="電器火災quiz.html">開始作答</a>
+          <a class="btn secondary" href="電器火災quiz.html" target="_blank" rel="noopener">在新視窗開啟</a>
+        </div>
+      </article>
+
+      <article class="tile">
+        <div class="pill">114 / 12｜保全己卷</div>
+        <h3>滅火器介紹與使用操作</h3>
+        <p>10 題是非、10 題單選；滿分 100、及格 60。含詳解、可下載 CSV。</p>
+        <div class="actions">
+          <a class="btn primary" href="滅火器介紹quiz.html">開始作答</a>
+          <a class="btn secondary" href="滅火器介紹quiz.html" target="_blank" rel="noopener">在新視窗開啟</a>
+        </div>
+      </article>
+    </div>
+
+    <p class="hint">提示：若你將現有的電器火災測驗檔案由 <span class="kbd">index.html</span> 重新命名為 <span class="kbd">電器火災quiz.html</span>，再把此入口頁另存為 <span class="kbd">index.html</span>，即可成為網站首頁。</p>
+  </main>
+  <footer>© 公司教育訓練測驗入口</footer>
+</body>
+</html>
