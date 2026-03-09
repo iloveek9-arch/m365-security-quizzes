@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>安橋保全教育訓練測驗入口</title>
+  <title>公司教育訓練測驗入口</title>
   <style>
     :root{--bg:#0b1220;--tile:#0f172a;--tile2:#111827;--text:#e5e7eb;--muted:#9ca3af;--brand:#60a5fa;--accent:#34d399}
     *{box-sizing:border-box}
@@ -28,34 +28,49 @@
 </head>
 <body>
   <header>
-    <h1>安橋保全教育訓練測驗入口</h1>
-    <div class="subtitle">請選擇要進行的測驗卷別；作答完成後成績會自動記錄到指定的 Google 試算表。</div>
+    <h1>公司教育訓練測驗入口</h1>
+    <div class="subtitle">最新期別會自動排在最前面（依「期別代碼」如 11412、11411 由新到舊排序）。</div>
   </header>
   <main>
-    <div class="grid">
-      <article class="tile">
-        <div class="pill">114 / 11｜保全戊卷</div>
-        <h3>防範電器火災</h3>
-        <p>10 題是非、10 題單選；滿分 100、及格 60。含詳解、可下載 CSV。</p>
-        <div class="actions">
-          <a class="btn primary" href="電器火災quiz.html">開始作答</a>
-          <a class="btn secondary" href="電器火災quiz.html" target="_blank" rel="noopener">在新視窗開啟</a>
-        </div>
-      </article>
-
-      <article class="tile">
-        <div class="pill">114 / 12｜保全己卷</div>
-        <h3>滅火器介紹與使用操作</h3>
-        <p>10 題是非、10 題單選；滿分 100、及格 60。含詳解、可下載 CSV。</p>
-        <div class="actions">
-          <a class="btn primary" href="滅火器介紹quiz.html">開始作答</a>
-          <a class="btn secondary" href="滅火器介紹quiz.html" target="_blank" rel="noopener">在新視窗開啟</a>
-        </div>
-      </article>
-    </div>
-
-
+    <div id="quizGrid" class="grid"></div>
+    <p class="hint">提示：新增新卷只要在 <span class="kbd">quizzes</span> 陣列中加入一筆資料即可，頁面會自動依 <span class="kbd">period</span>（如 11412）排序。</p>
   </main>
-  <footer>© 安橋保全教育訓練測驗入口</footer>
+  <footer>© 公司教育訓練測驗入口</footer>
+
+  <script>
+    // 題組清單：period 使用「民國年+月份」數字（例如 11412 表示 114 年 12 月）
+    const quizzes = [
+      {
+        period: 11412,
+        badge: '114 / 12｜保全己卷',
+        title: '滅火器介紹與使用操作',
+        desc: '10 題是非、10 題單選；滿分 100、及格 60。含詳解、可下載 CSV。',
+        href: '滅火器介紹quiz.html'
+      },
+      {
+        period: 11411,
+        badge: '114 / 11｜保全戊卷',
+        title: '防範電器火災',
+        desc: '10 題是非、10 題單選；滿分 100、及格 60。含詳解、可下載 CSV。',
+        href: '電器火災quiz.html'
+      }
+    ];
+
+    // 依 period 由大到小排序（越新越前面）
+    quizzes.sort((a,b)=> b.period - a.period);
+
+    const grid = document.getElementById('quizGrid');
+    grid.innerHTML = quizzes.map(q=>`
+      <article class="tile">
+        <div class="pill">${q.badge}</div>
+        <h3>${q.title}</h3>
+        <p>${q.desc}</p>
+        <div class="actions">
+          <a class="btn primary" href="${q.href}">開始作答</a>
+          <a class="btn secondary" href="${q.href}" target="_blank" rel="noopener">在新視窗開啟</a>
+        </div>
+      </article>
+    `).join('');
+  </script>
 </body>
 </html>
