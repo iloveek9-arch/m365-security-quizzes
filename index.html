@@ -1,76 +1,41 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>公司教育訓練測驗入口</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>保全教育訓練測驗首頁</title>
   <style>
-    :root{--bg:#0b1220;--tile:#0f172a;--tile2:#111827;--text:#e5e7eb;--muted:#9ca3af;--brand:#60a5fa;--accent:#34d399}
-    *{box-sizing:border-box}
-    html,body{margin:0;height:100%;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans TC",sans-serif;background:radial-gradient(1200px 600px at 10% -10%,#1e293b,transparent),radial-gradient(1000px 500px at 120% 20%,#0ea5e9,transparent),var(--bg);color:var(--text)}
-    header{max-width:1000px;margin:36px auto 12px;padding:0 16px}
-    h1{margin:0 0 6px;font-size:clamp(22px,3vw,34px);letter-spacing:.3px}
-    .subtitle{color:var(--muted);font-size:14px}
-    main{max-width:1000px;margin:18px auto 48px;padding:0 16px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-    .tile{position:relative;border-radius:14px;padding:18px 16px;background:linear-gradient(180deg,var(--tile),var(--tile2));border:1px solid rgba(255,255,255,.08);box-shadow:0 10px 30px rgba(0,0,0,.25)}
-    .tile h3{margin:0 0 8px;font-size:18px}
-    .tile p{margin:0;color:var(--muted);font-size:14px;min-height:40px}
-    .actions{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
-    a.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;border-radius:10px;padding:10px 14px;border:1px solid rgba(255,255,255,.14)}
-    a.primary{background:linear-gradient(180deg,#2563eb,#1d4ed8);color:#fff}
-    a.secondary{background:rgba(255,255,255,.04);color:var(--text)}
-    .pill{display:inline-block;border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:2px 8px;font-size:12px;color:var(--muted)}
-    footer{max-width:1000px;margin:0 auto 40px;padding:0 16px;color:var(--muted);font-size:13px}
-    .hint{margin-top:10px;color:#cbd5e1;font-size:13px}
-    .kbd{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);padding:2px 6px;border-radius:6px}
+    body{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif; line-height:1.6; color:#1f2937;}
+    .container{max-width:900px;margin:2.5rem auto;padding:0 1rem}
+    h1{font-size:1.8rem;margin:0 0 .5rem}
+    .sub{color:#6b7280;margin-bottom:1.25rem}
+    ul{list-style:none;padding:0;margin:1rem 0}
+    li{margin:.75rem 0}
+    a.card{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:1rem 1.25rem;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+    .title{font-weight:700}
+    .meta{color:#6b7280;font-size:.9rem;margin-top:.25rem}
+    .badge{display:inline-block;background:#eef2ff;color:#3730a3;border:1px solid #c7d2fe;border-radius:999px;padding:.1rem .6rem;font-size:.78rem;margin-right:.4rem}
   </style>
 </head>
 <body>
-  <header>
-    <h1>公司教育訓練測驗入口</h1>
-    <div class="subtitle">最新期別會自動排在最前面（依「期別代碼」如 11412、11411 由新到舊排序）。</div>
-  </header>
-  <main>
-    <div id="quizGrid" class="grid"></div>
-    <p class="hint">提示：新增新卷只要在 <span class="kbd">quizzes</span> 陣列中加入一筆資料即可，頁面會自動依 <span class="kbd">period</span>（如 11412）排序。</p>
-  </main>
-  <footer>© 公司教育訓練測驗入口</footer>
-
-  <script>
-    // 題組清單：period 使用「民國年+月份」數字（例如 11412 表示 114 年 12 月）
-    const quizzes = [
-      {
-        period: 11412,
-        badge: '114 / 12｜保全己卷',
-        title: '滅火器介紹與使用操作',
-        desc: '10 題是非、10 題單選；滿分 100、及格 60。含詳解、可下載 CSV。',
-        href: '滅火器介紹quiz.html'
-      },
-      {
-        period: 11411,
-        badge: '114 / 11｜保全戊卷',
-        title: '防範電器火災',
-        desc: '10 題是非、10 題單選；滿分 100、及格 60。含詳解、可下載 CSV。',
-        href: '電器火災quiz.html'
-      }
-    ];
-
-    // 依 period 由大到小排序（越新越前面）
-    quizzes.sort((a,b)=> b.period - a.period);
-
-    const grid = document.getElementById('quizGrid');
-    grid.innerHTML = quizzes.map(q=>`
-      <article class="tile">
-        <div class="pill">${q.badge}</div>
-        <h3>${q.title}</h3>
-        <p>${q.desc}</p>
-        <div class="actions">
-          <a class="btn primary" href="${q.href}">開始作答</a>
-          <a class="btn secondary" href="${q.href}" target="_blank" rel="noopener">在新視窗開啟</a>
-        </div>
-      </article>
-    `).join('');
-  </script>
+  <div class="container">
+    <h1>保全教育訓練測驗首頁</h1>
+    <div class="sub">請選擇欲作答的測驗。已依檔名由新到舊排序。</div>
+    <ul>
+      <li>
+        <a class="card" href="11412_滅火器介紹與使用操作_己_測驗.html">
+          <div class="title">114年12月｜滅火器介紹與使用操作（己）測驗</div>
+          <div class="meta"><span class="badge">11412</span>檔案：11412_滅火器介紹與使用操作_己_測驗.html</div>
+        </a>
+      </li>
+      <li>
+        <a class="card" href="11411_防範電器火災_戊_測驗.html">
+          <div class="title">114年11月｜防範電器火災（戊）測驗</div>
+          <div class="meta"><span class="badge">11411</span>檔案：11411_防範電器火災_戊_測驗.html</div>
+        </a>
+      </li>
+    </ul>
+  </div>
 </body>
 </html>
