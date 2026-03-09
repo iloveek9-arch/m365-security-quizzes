@@ -3,148 +3,166 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>防範電器火災 線上測驗（114 年 11 月｜保全戊卷）</title>
+  <title>【公司】防範電器火災 線上測驗（114 年 11 月｜保全戊卷）</title>
   <style>
-    :root{--bg:#f7f7fb;--card:#fff;--text:#222;--muted:#666;--brand:#0a7cff;--ok:#16a34a;--bad:#dc2626;--warn:#d97706}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans TC",sans-serif}
-    header{padding:20px 16px;text-align:center;background:linear-gradient(135deg,#e7f1ff,#fff);border-bottom:1px solid #e6e6ef}
-    h1{margin:0 0 6px;font-size:clamp(20px,2.8vw,28px)}.subtitle{color:var(--muted);font-size:14px}
-    main{max-width:960px;margin:24px auto;padding:0 12px 48px}
-    .card{background:var(--card);border:1px solid #e6e6ef;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.04);padding:18px;margin-bottom:18px}
-    .row{display:flex;gap:12px;flex-wrap:wrap}.row .field{flex:1;min-width:220px}
-    label{display:block;font-weight:600;margin:6px 0}
-    input[type=text],select{width:100%;padding:10px 12px;border-radius:8px;border:1px solid #dadbe6;font-size:16px}
-    .section-title{font-size:18px;margin:8px 0 12px}
-    .q{padding:12px;border:1px solid #e9e9f2;border-radius:10px;margin:10px 0}
-    .q-title{font-weight:600;margin-bottom:8px}.choice{display:block;margin:6px 0}
-    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
-    button{appearance:none;background:var(--brand);color:#fff;border:none;border-radius:10px;padding:10px 16px;font-size:16px;font-weight:600;cursor:pointer}
-    button.secondary{background:#eef2ff;color:#183153;border:1px solid #c7d2fe}button.warn{background:var(--warn)}
-    button:disabled{opacity:.6;cursor:not-allowed}.note{color:var(--muted);font-size:13px}
-    .result{padding:12px 14px;border:1px dashed #d0d7e2;border-radius:8px;background:#fafcff}
-    .correct{border-color:#a7f3d0;background:#ecfdf5}.incorrect{border-color:#fecaca;background:#fef2f2}
-    .pill{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;border:1px solid #d1d5db;color:#374151;background:#fff;margin-left:8px}
-    details{margin-top:10px}footer{max-width:960px;margin:0 auto 40px;padding:0 12px;color:var(--muted);font-size:13px}
-    .hidden{display:none}
+:root{--bg:#f7f7fb;--card:#fff;--text:#222;--muted:#666;--brand:#0a7cff;--ok:#16a34a;--bad:#dc2626;--warn:#d97706}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans TC",sans-serif}
+header{padding:20px 16px;text-align:center;background:linear-gradient(135deg,#e7f1ff,#ffffff);border-bottom:1px solid #e6e6ef}
+h1{margin:0 0 6px;font-size:clamp(20px,2.8vw,28px)}
+.subtitle{color:var(--muted);font-size:14px}
+main{max-width:960px;margin:24px auto;padding:0 12px 48px}
+.card{background:var(--card);border:1px solid #e6e6ef;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.04);padding:18px;margin-bottom:18px}
+.row{display:flex;gap:12px;flex-wrap:wrap}.row .field{flex:1;min-width:220px}
+label{display:block;font-weight:600;margin:6px 0}
+input[type=text],select{width:100%;padding:10px 12px;border-radius:8px;border:1px solid #dadbe6;font-size:16px}
+.section-title{font-size:18px;margin:8px 0 12px}
+.q{padding:12px;border:1px solid #e9e9f2;border-radius:10px;margin:10px 0}
+.q-title{font-weight:600;margin-bottom:8px}
+.choice{display:block;margin:6px 0}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+button{appearance:none;background:var(--brand);color:#fff;border:none;border-radius:10px;padding:10px 16px;font-size:16px;font-weight:600;cursor:pointer}
+button.secondary{background:#eef2ff;color:#183153;border:1px solid #c7d2fe}button.warn{background:var(--warn)}
+button:disabled{opacity:.6;cursor:not-allowed}
+.note{color:var(--muted);font-size:13px}
+.result{padding:12px 14px;border:1px dashed #d0d7e2;border-radius:8px;background:#fafcff}
+.correct{border-color:#a7f3d0;background:#ecfdf5}.incorrect{border-color:#fecaca;background:#fef2f2}
+.pill{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;border:1px solid #d1d5db;color:#374151;background:#fff;margin-left:8px}
+details{margin-top:10px}footer{max-width:960px;margin:0 auto 40px;padding:0 12px;color:var(--muted);font-size:13px}
+.hidden{display:none}
   </style>
 </head>
 <body>
-<header>
-  <h1>防範電器火災 線上測驗（114 年 11 月｜保全戊卷）</h1>
-  <div class="subtitle">請完成 20 題測驗。滿分 100 分，答對 1 題 5 分，<strong>及格 60 分</strong>。</div>
-</header>
-<main>
-  <section class="card" id="intro">
-    <div class="row">
-      <div class="field"><label for="unit">單位</label><input id="unit" type="text" placeholder="請輸入單位"/></div>
-      <div class="field"><label for="name">姓名</label><input id="name" type="text" placeholder="請輸入姓名"/></div>
-      <div class="field"><label for="attempt">測驗批次</label>
-        <select id="attempt"><option>第1次</option><option>第2次</option><option>第3次</option></select>
-      </div>
-    </div>
-    <div class="actions"><button id="startBtn">開始作答</button><button class="secondary" id="loadLastBtn">載入上次存檔</button></div>
-    <p class="note">提示：系統會在本機自動暫存作答進度（不需上傳伺服器）。</p>
-  </section>
-
-  <section id="quizPanel" class="hidden">
-    <div class="card">
-      <div class="row" style="align-items:center;justify-content:space-between">
-        <div><strong>作答中…</strong><span id="meta" class="pill"></span><span id="timer" class="pill">計時 00:00</span></div>
-        <div class="actions"><button class="secondary" id="saveDraftBtn">暫存進度</button><button class="warn" id="clearBtn">清除作答</button></div>
-      </div>
-    </div>
-
-    <div class="card"><h2 class="section-title">一、是非題（每題 5 分，共 10 題）</h2><div id="tfContainer"></div></div>
-    <div class="card"><h2 class="section-title">二、選擇題（每題 5 分，共 10 題）</h2><div id="mcContainer"></div></div>
-
-    <div class="card">
-      <div class="actions"><button id="submitBtn">送出交卷</button></div>
-      <p class="note">送出後將立即顯示分數與詳解（僅本機可見）。如需關閉詳解，可在下方「管理設定」調整。</p>
-    </div>
-
-    <div id="resultPanel" class="hidden">
-      <div class="card result" id="scoreCard"></div>
-      <div class="card"><details open><summary><strong>檢視詳解與對錯</strong></summary><div id="review"></div></details>
-        <div class="actions"><button id="exportBtn">下載成績 (CSV)</button></div>
-      </div>
-    </div>
-
-    <div class="card"><details><summary><strong>管理設定（僅本機）</strong></summary>
+  <header>
+    <h1>防範電器火災 線上測驗（114 年 11 月｜保全戊卷）</h1>
+    <div class="subtitle">請完成 20 題測驗。滿分 100 分，答對 1 題 5 分，<strong>及格 60 分</strong>。</div>
+  </header>
+  <main>
+    <section class="card" id="intro">
       <div class="row">
-        <div class="field"><label><input type="checkbox" id="toggleExplain" checked/> 交卷後顯示詳解與正確答案</label></div>
-        <div class="field"><label><input type="checkbox" id="shuffleOrder" checked/> 題目亂數排列</label></div>
-        <div class="field"><label for="passScore">及格分數</label><input id="passScore" type="text" value="60"/></div>
-        <div class="field"><label><input type="checkbox" id="sendToSheets" checked/> 交卷時記錄到 Google 試算表</label>
-          <div class="note">（已設定 Web App 端點，可直接使用）</div></div>
+        <div class="field"><label for="unit">單位</label><input id="unit" type="text" placeholder="請輸入單位"/></div>
+        <div class="field"><label for="name">姓名</label><input id="name" type="text" placeholder="請輸入姓名"/></div>
+        <div class="field"><label for="attempt">測驗批次</label>
+          <select id="attempt"><option>第1次</option><option>第2次</option><option>第3次</option></select>
+        </div>
       </div>
-    </details></div>
-  </section>
-</main>
-<footer>
-  <p>本測驗題庫依據公司教育訓練講義「防範電器火災」整理（114 年 11 月）。</p>
-  <p class="note">（此頁面純前端。若啟用 Google 串接，分數會送至指定端點）</p>
-</footer>
+      <div class="actions"><button id="startBtn">開始作答</button><button class="secondary" id="loadLastBtn">載入上次存檔</button></div>
+      <p class="note">提示：系統會在本機自動暫存作答進度（不需上傳伺服器）。</p>
+    </section>
+
+    <section id="quizPanel" class="hidden">
+      <div class="card">
+        <div class="row" style="align-items:center;justify-content:space-between">
+          <div><strong>作答中…</strong><span id="meta" class="pill"></span><span id="timer" class="pill">計時 00:00</span></div>
+          <div class="actions"><button class="secondary" id="saveDraftBtn">暫存進度</button><button class="warn" id="clearBtn">清除作答</button></div>
+        </div>
+      </div>
+
+      <div class="card"><h2 class="section-title">一、是非題（每題 5 分，共 10 題）</h2><div id="tfContainer"></div></div>
+      <div class="card"><h2 class="section-title">二、選擇題（每題 5 分，共 10 題）</h2><div id="mcContainer"></div></div>
+
+      <div class="card"><div class="actions"><button id="submitBtn">送出交卷</button></div><p class="note">送出後將立即顯示分數與詳解（僅本機可見）。如需關閉詳解，可在下方「管理設定」調整。</p></div>
+
+      <div id="resultPanel" class="hidden"><div class="card result" id="scoreCard"></div><div class="card"><details open><summary><strong>檢視詳解與對錯</strong></summary><div id="review"></div></details><div class="actions"><button id="exportBtn">下載成績 (CSV)</button></div></div></div>
+
+      <div class="card"><details><summary><strong>管理設定（僅本機）</strong></summary><div class="row"><div class="field"><label><input type="checkbox" id="toggleExplain" checked/> 交卷後顯示詳解與正確答案</label></div><div class="field"><label><input type="checkbox" id="shuffleOrder" checked/> 題目亂數排列</label></div><div class="field"><label for="passScore">及格分數</label><input id="passScore" type="text" value="60"/></div><div class="field"><label><input type="checkbox" id="sendToSheets" checked/> 交卷時記錄到 Google 試算表</label><div class="note">（已設定 Web App 端點，可直接使用）</div></div></div></details></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>本測驗題庫依據公司教育訓練講義「防範電器火災」整理（114 年 11 月）。</p>
+    <p class="note">（此頁面純前端。若啟用 Google 串接，分數會送至指定端點）</p>
+  </footer>
 
 <script>
-const GOOGLE_SHEETS={enabled:true,endpoint:'https://script.google.com/macros/s/AKfycbxEcE1alUjcTMy31z5I_aF5cE31kFTApNwOcMmuahy2DwbhENKYF9B4Osuujd44LjnqZQ/exec'};
-const trueFalse=[
-  {id:'T1',q:'新增冷氣機可與原有冷氣機共用同一迴路。',ans:false},
-  {id:'T2',q:'住家重新裝潢時，一定要依用電狀況重新配置總用電容量、迴路、插座等，並更新所有電線。',ans:true},
-  {id:'T3',q:'保險絲熔斷，常為用電過量的警告，切勿誤以為保險絲太細而換用較粗之保險絲或以銅絲、鐵絲替代。',ans:true},
-  {id:'T4',q:'神龕燈具長期使用，偶爾檢視配線並清理插頭及插座間的塵埃，並定期更換。',ans:false},
-  {id:'T5',q:'應經常查看插頭是否有綠鏽現象，如有此情形，表示插頭附近溼度高，可能讓兩極通電造成電線短路。',ans:true},
-  {id:'T6',q:'拔下延長線插頭時，應手握電線取下。',ans:false},
-  {id:'T7',q:'電源總開關如經常有跳電情形，應關閉用電量高的電器。',ans:true},
-  {id:'T8',q:'不可用釘子、騎馬釘或訂書針將延長線或電線固定。',ans:true},
-  {id:'T9',q:'對延長線之使用，只要保險開關不會跳脫，可接多條延長線使用。',ans:false},
-  {id:'T10',q:'電線起火應使用 ABC 乾粉滅火器滅火，而電源未切斷前，切勿用水潑覆滅火，以防觸電。',ans:true},
+const QUIZ_NAME = '11411 防範電器火災';
+const GOOGLE_SHEETS = {{ enabled: true, endpoint: 'https://script.google.com/macros/s/AKfycbxEcE1alUjcTMy31z5I_aF5cE31kFTApNwOcMmuahy2DwbhENKYF9B4Osuujd44LjnqZQ/exec' }};
+const trueFalse = [
+  { id:'T1', q:'新增冷氣機可與原有冷氣機共用同一迴路。', ans:false },
+  { id:'T2', q:'住家重新裝潢時，一定要依用電狀況重新配置總用電容量、迴路、插座等，並更新所有電線。', ans:true },
+  { id:'T3', q:'保險絲熔斷，常為用電過量的警告，切勿誤以為保險絲太細而換用較粗之保險絲或以銅絲、鐵絲替代。', ans:true },
+  { id:'T4', q:'神龕燈具長期使用，偶爾檢視配線並清理插頭及插座間的塵埃，並定期更換。', ans:false },
+  { id:'T5', q:'應經常查看插頭是否有綠鏽現象，如有此情形，表示插頭附近溼度高，可能讓兩極通電造成電線短路。', ans:true },
+  { id:'T6', q:'拔下延長線插頭時，應手握電線取下。', ans:false },
+  { id:'T7', q:'電源總開關如經常有跳電情形，應關閉用電量高的電器。', ans:true },
+  { id:'T8', q:'不可用釘子、騎馬釘或訂書針將延長線或電線固定。', ans:true },
+  { id:'T9', q:'對延長線之使用，只要保險開關不會跳脫，可接多條延長線使用。', ans:false },
+  { id:'T10', q:'電線起火應使用 ABC 乾粉滅火器滅火，而電源未切斷前，切勿用水潑覆滅火，以防觸電。', ans:true },
 ];
-const multipleChoice=[
-  {id:'S1',q:'購買家電應注意產品是否有政府檢驗合格標示、接地等安全裝置。',options:['政府檢驗合格標示','接地','以上皆是'],ans:2},
-  {id:'S2',q:'用電量較大的電器為何？',options:['微波爐','烤箱','電鍋','以上皆是'],ans:3},
-  {id:'S3',q:'插座出現何種徵兆時應更換新的？',options:['插座容易鬆動','綠鏽現象','焦黑現象','以上皆是'],ans:3},
-  {id:'S4',q:'使用中之延長線如有異常發燙或異味產生，可能為過載現象，應如何處置？',options:['立即停止使用該電器','堅持到底'],ans:0},
-  {id:'S5',q:'應經常檢視配線並清理何處之塵埃，以免產生積污導電現象與火災發生？',options:['插頭','插座','插頭及插座'],ans:2},
-  {id:'S6',q:'勿將電線及延長線置於何處，以免造成電流過度負載而產生高熱危險？',options:['有縫隙櫃子下','地毯下','以上皆是'],ans:1},
-  {id:'S7',q:'使用中之延長線如有異常發燙或異味產生，多半是何種情形？',options:['本身線體的味道','旁有垃圾堆放','過載現象'],ans:2},
-  {id:'S8',q:'插座是否過載之簡易算法為何？',options:['V = W ÷ A','W = I × V','E = mc²'],ans:1},
-  {id:'S9',q:'電子鍋耗電功率為 660 瓦特，在 110 伏特電壓下，所需電流為多少？',options:['3 安培','6 安培','9 安培'],ans:1},
-  {id:'S10',q:'電線起火應使用哪一種滅火器滅火？',options:['二氧化碳','BC 乾粉','ABC 乾粉'],ans:2},
+const multipleChoice = [
+  { id:'S1', q:'購買家電應注意產品是否有政府檢驗合格標示、接地等安全裝置。', options:['政府檢驗合格標示','接地','以上皆是'], ans:2 },
+  { id:'S2', q:'用電量較大的電器為何？', options:['微波爐','烤箱','電鍋','以上皆是'], ans:3 },
+  { id:'S3', q:'插座出現何種徵兆時應更換新的？', options:['插座容易鬆動','綠鏽現象','焦黑現象','以上皆是'], ans:3 },
+  { id:'S4', q:'使用中之延長線如有異常發燙或異味產生，可能為過載現象，應如何處置？', options:['立即停止使用該電器','堅持到底'], ans:0 },
+  { id:'S5', q:'應經常檢視配線並清理何處之塵埃，以免產生積污導電現象與火災發生？', options:['插頭','插座','插頭及插座'], ans:2 },
+  { id:'S6', q:'勿將電線及延長線置於何處，以免造成電流過度負載而產生高熱危險？', options:['有縫隙櫃子下','地毯下','以上皆是'], ans:1 },
+  { id:'S7', q:'使用中之延長線如有異常發燙或異味產生，多半是何種情形？', options:['本身線體的味道','旁有垃圾堆放','過載現象'], ans:2 },
+  { id:'S8', q:'插座是否過載之簡易算法為何？', options:['V = W ÷ A','W = I × V','E = mc²'], ans:1 },
+  { id:'S9', q:'電子鍋耗電功率為 660 瓦特，在 110 伏特電壓下，所需電流為多少？', options:['3 安培','6 安培','9 安培'], ans:1 },
+  { id:'S10', q:'電線起火應使用哪一種滅火器滅火？', options:['二氧化碳','BC 乾粉','ABC 乾粉'], ans:2 },
 ];
-
 const $=(s,p=document)=>p.querySelector(s), $$=(s,p=document)=>Array.from(p.querySelectorAll(s));
-const state={startAt:null,timer:null,explain:true,shuffle:true,passScore:60,items:[]};
-function shuffle(a){return a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(x=>x[1]);}
-function render(){
-  const tf=state.shuffle?shuffle(trueFalse):[...trueFalse];
-  const mc=state.shuffle?shuffle(multipleChoice):[...multipleChoice];
+const state={{startAt:null,timer:null,explain:true,shuffle:true,passScore:60}};
+function shuffle(a){{return a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(x=>x[1]);}}
+function render(){{
+  const tf = state.shuffle?shuffle(trueFalse):[...trueFalse];
+  const mc = state.shuffle?shuffle(multipleChoice):[...multipleChoice];
   const tfC=$('#tfContainer'); tfC.innerHTML='';
-  tf.forEach((t,i)=>{const d=document.createElement('div'); d.className='q'; d.innerHTML=`<div class="q-title">${i+1}. ${t.q}</div>
+  tf.forEach((t,i)=>{{const d=document.createElement('div'); d.className='q'; d.innerHTML=`<div class="q-title">${i+1}. ${t.q}</div>
   <label class="choice"><input type="radio" name="${t.id}" value="true"> 正確</label>
-  <label class="choice"><input type="radio" name="${t.id}" value="false"> 錯誤</label>`; tfC.appendChild(d);});
+  <label class="choice"><input type="radio" name="${t.id}" value="false"> 錯誤</label>`; tfC.appendChild(d);}});
   const mcC=$('#mcContainer'); mcC.innerHTML='';
-  mc.forEach((m,i)=>{const d=document.createElement('div'); d.className='q'; const opts=m.options.map((o,idx)=>`<label class="choice"><input type="radio" name="${m.id}" value="${idx}"> ${idx+1}. ${o}</label>`).join('');
-  d.innerHTML=`<div class="q-title">${i+1}. ${m.q}</div><div class="choices">${opts}</div>`; mcC.appendChild(d);});
-}
-function start(){const unit=$('#unit').value.trim(), name=$('#name').value.trim(), attempt=$('#attempt').value; if(!unit||!name){alert('請先填寫「單位」與「姓名」');return}
+  mc.forEach((m,i)=>{{const d=document.createElement('div'); d.className='q'; const opts=m.options.map((o,idx)=>`<label class="choice"><input type="radio" name="${m.id}" value="${idx}"> ${idx+1}. ${o}</label>`).join(''); d.innerHTML=`<div class="q-title">${i+1}. ${m.q}</div><div class="choices">${opts}</div>`; mcC.appendChild(d);}});
+}}
+function start(){{
+  const unit=$('#unit').value.trim(), name=$('#name').value.trim(), attempt=$('#attempt').value; if(!unit||!name){{alert('請先填寫「單位」與「姓名」');return}}
   $('#intro').classList.add('hidden'); $('#quizPanel').classList.remove('hidden'); $('#meta').textContent=`${unit}｜${name}｜${attempt}`;
-  state.startAt=Date.now(); state.timer=setInterval(()=>{const s=Math.floor((Date.now()-state.startAt)/1000); const mm=String(Math.floor(s/60)).padStart(2,'0'); const ss=String(s%60).padStart(2,'0'); $('#timer').textContent=`計時 ${mm}:${ss}`;},1000);
-  state.shuffle=$('#shuffleOrder').checked; state.explain=$('#toggleExplain').checked; state.passScore=parseInt($('#passScore').value||'60',10); render(); restoreDraft();}
-function compute(){let correct=0; const detail=[]; trueFalse.forEach((t,i)=>{const v=($(`input[name="${t.id}"]:checked`)||{}).value; const ok=String(t.ans)===v; if(ok) correct++; detail.push({id:t.id,type:'是非',no:i+1,title:t.q,your:v===''?null:v,correct:String(t.ans)});});
-  multipleChoice.forEach((m,i)=>{const v=($(`input[name="${m.id}"]:checked`)||{}).value; const ok=String(m.ans)===v; if(ok) correct++; detail.push({id:m.id,type:'單選',no:i+1,title:m.q,your:v===''?null:v,correct:String(m.ans)});});
-  return {score:correct*5, correct, total:20, detail};}
-async function sendToSheets(rec){try{const enabled=GOOGLE_SHEETS.enabled && $('#sendToSheets').checked; const url=(GOOGLE_SHEETS.endpoint||'').trim(); if(!enabled||!url) return; const payload=new URLSearchParams({unit:rec.unit,name:rec.name,dateISO:new Date().toISOString(),dateLocal:new Date().toLocaleString(),score:String(rec.score),pass:rec.pass?'1':'0',correct:String(rec.correct),total:String(rec.total),attempt:rec.attempt,spentSec:String(rec.spentSec)}); await fetch(url,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:payload.toString()});}catch(e){console.warn('送出到 Google 試算表失敗：',e)}}
-function submit(){const unit=$('#unit').value.trim(), name=$('#name').value.trim(), attempt=$('#attempt').value; const spentSec=Math.floor((Date.now()-state.startAt)/1000); const {score,correct,total,detail}=compute(); const pass=score>=state.passScore; const mm=String(Math.floor(spentSec/60)).padStart(2,'0'); const ss=String(spentSec%60).padStart(2,'0');
-  const sc=$('#scoreCard'); sc.className='card result ' + (pass?'correct':'incorrect'); sc.innerHTML=`<h3 style="margin:0 0 6px">${name} 的測驗結果</h3><div>單位：${unit}　批次：${attempt}　作答時間：${mm}:${ss}</div><p style="font-size:18px;margin:8px 0 0"><strong>得分：${score} 分</strong>（答對 ${correct} / ${total} 題）<span class="pill">及格線 ${state.passScore} 分</span></p><div class="note">完成時間：${new Date().toLocaleString()}</div>`;
-  const review=$('#review'); review.innerHTML=''; if(state.explain){trueFalse.forEach((t,i)=>{const your=($(`input[name="${t.id}"]:checked`)||{}).value; const line=document.createElement('div'); line.className='q'; line.innerHTML=`<div class="q-title">${i+1}. ${t.q}</div><div>你的答案：<strong>${your===''?'（未作答）':(your==='true'?'正確':'錯誤')}</strong>　|　正確答案：<strong>${t.ans?'正確':'錯誤'}</strong></div>`; review.appendChild(line);}); multipleChoice.forEach((m,i)=>{const your=($(`input[name="${m.id}"]:checked`)||{}).value; const line=document.createElement('div'); line.className='q'; const opts=m.options.map((o,idx)=>`${idx+1}.${o}`).join('　'); line.innerHTML=`<div class="q-title">${i+1}. ${m.q}</div><div><small>選項：${opts}</small></div><div>你的答案：<strong>${your===''?'（未作答）':(parseInt(your,10)+1)}</strong>　|　正確答案：<strong>${m.ans+1}</strong></div>`; review.appendChild(line);}); }
-  $('#resultPanel').classList.remove('hidden'); const rec={unit,name,attempt,score,pass,correct,total,spentSec,detail}; const key='fire-quiz-records'; const exist=JSON.parse(localStorage.getItem(key)||'[]'); exist.push(rec); localStorage.setItem(key, JSON.stringify(exist)); $$('input[type="radio"]').forEach(el=>el.disabled=true); $('#submitBtn').disabled=true; sendToSheets(rec); }
-function saveDraft(){const draft={};[...trueFalse.map(t=>t.id),...multipleChoice.map(m=>m.id)].forEach(id=>{const c=$(`input[name="${id}"]:checked`); draft[id]=c?c.value:null}); draft.unit=$('#unit').value.trim(); draft.name=$('#name').value.trim(); draft.attempt=$('#attempt').value; localStorage.setItem('fire-quiz-draft', JSON.stringify(draft)); alert('已暫存至本機');}
-function restoreDraft(){const s=localStorage.getItem('fire-quiz-draft'); if(!s) return; try{const d=JSON.parse(s); if(d.unit) $('#unit').value=d.unit; if(d.name) $('#name').value=d.name; if(d.attempt) $('#attempt').value=d.attempt; Object.keys(d).forEach(id=>{if(id.startsWith('T')||id.startsWith('S')){const v=d[id]; if(v!==null){const el=document.querySelector(`input[name="${id}"][value="${v}"]`); if(el) el.checked=true;}}});}catch(e){}}
-function loadLast(){const s=localStorage.getItem('fire-quiz-draft'); if(!s){alert('找不到上次暫存的作答資料。');return} start();}
-function clearAnswers(){if(!confirm('確定要清除目前作答嗎？')) return; $$('input[type="radio"]').forEach(el=>el.checked=false); localStorage.removeItem('fire-quiz-draft');}
-function exportCSV(){const key='fire-quiz-records';const data=JSON.parse(localStorage.getItem(key)||'[]'); if(!data.length){alert('目前沒有可下載的成績資料。');return} const header=['單位','姓名','批次','得分','是否及格','答對題數','總題數','作答秒數']; const lines=[header.join(',')]; data.forEach(r=>{lines.push([r.unit,r.name,r.attempt,r.score,r.pass?'是':'否',r.correct,r.total,r.spentSec].map(x=>`"${String(x).replace(/"/g,'""')}"`).join(','))}); const blob=new Blob(["\ufeff"+lines.join('\n')],{type:'text/csv;charset=utf-8;'}); const url=URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download='防範電器火災_測驗成績.csv'; a.click(); URL.revokeObjectURL(url);}
+  state.startAt=Date.now(); state.timer=setInterval(()=>{{const s=Math.floor((Date.now()-state.startAt)/1000); const mm=String(Math.floor(s/60)).padStart(2,'0'); const ss=String(s%60).padStart(2,'0'); $('#timer').textContent=`計時 ${mm}:${ss}`; }},1000);
+  state.shuffle=$('#shuffleOrder').checked; state.explain=$('#toggleExplain').checked; state.passScore=parseInt($('#passScore').value||'60',10); render(); restoreDraft();
+}}
+function compute(){{ let correct=0; const detail=[];
+  trueFalse.forEach((t,i)=>{{const v=($(`input[name="${t.id}"]:checked`)||{{}}).value; const ok=String(t.ans)===v; if(ok) correct++; detail.push({{id:t.id,type:'是非',no:i+1,title:t.q,your:v===''?null:v,correct:String(t.ans)}});}});
+  multipleChoice.forEach((m,i)=>{{const v=($(`input[name="${m.id}"]:checked`)||{{}}).value; const ok=String(m.ans)===v; if(ok) correct++; detail.push({{id:m.id,type:'單選',no:i+1,title:m.q,your:v===''?null:v,correct:String(m.ans)}});}});
+  return {{score:correct*5, correct, total:20, detail}};
+}}
+async function sendToSheets(rec){{
+  try{{
+    const enabled=GOOGLE_SHEETS.enabled && $('#sendToSheets').checked; const url=(GOOGLE_SHEETS.endpoint||'').trim(); if(!enabled||!url) return;
+    const payload=new URLSearchParams({{
+      unit: rec.unit,
+      name: rec.name,
+      dateISO: new Date().toISOString(),
+      dateLocal: new Date().toLocaleString(),
+      score: String(rec.score),
+      pass: rec.pass ? '1':'0',
+      correct: String(rec.correct),
+      total: String(rec.total),
+      attempt: rec.attempt,
+      spentSec: String(rec.spentSec),
+      quizName: QUIZ_NAME
+    }});
+    await fetch(url,{{method:'POST',mode:'no-cors',headers:{{'Content-Type':'application/x-www-form-urlencoded'}},body:payload.toString()}});
+  }}catch(e){{console.warn('送出到 Google 試算表失敗：',e)}}
+}}
+function submit(){{
+  const unit=$('#unit').value.trim(), name=$('#name').value.trim(), attempt=$('#attempt').value; const spentSec=Math.floor((Date.now()-state.startAt)/1000);
+  const {{score,correct,total,detail}}=compute(); const pass=score>=state.passScore; const mm=String(Math.floor(spentSec/60)).padStart(2,'0'); const ss=String(spentSec%60).padStart(2,'0');
+  const sc=$('#scoreCard'); sc.className='card result '+(pass?'correct':'incorrect'); sc.innerHTML=`<h3 style="margin:0 0 6px">${name} 的測驗結果</h3><div>單位：${unit}　批次：${attempt}　作答時間：${mm}:${ss}</div><p style="font-size:18px;margin:8px 0 0"><strong>得分：${score} 分</strong>（答對 ${correct} / ${total} 題）<span class="pill">及格線 ${state.passScore} 分</span></p><div class="note">完成時間：${new Date().toLocaleString()}</div>`;
+  const review=$('#review'); review.innerHTML=''; if(state.explain){{
+    trueFalse.forEach((t,i)=>{{const your=($(`input[name="${t.id}"]:checked`)||{{}}).value; const line=document.createElement('div'); line.className='q'; line.innerHTML=`<div class="q-title">${i+1}. ${t.q}</div><div>你的答案：<strong>${your===''?'（未作答）':(your==='true'?'正確':'錯誤')}</strong>　|　正確答案：<strong>${t.ans?'正確':'錯誤'}</strong></div>`; review.appendChild(line);}});
+    multipleChoice.forEach((m,i)=>{{const your=($(`input[name="${m.id}"]:checked`)||{{}}).value; const line=document.createElement('div'); line.className='q'; const opts=m.options.map((o,idx)=>`${idx+1}.${o}`).join('　'); line.innerHTML=`<div class="q-title">${i+1}. ${m.q}</div><div><small>選項：${opts}</small></div><div>你的答案：<strong>${your===''?'（未作答）':(parseInt(your,10)+1)}</strong>　|　正確答案：<strong>${m.ans+1}</strong></div>`; review.appendChild(line);}});
+  }}
+  $('#resultPanel').classList.remove('hidden');
+  const rec={{unit,name,attempt,score,pass,correct,total,spentSec,quizName:QUIZ_NAME,detail}};
+  const key='quiz-records'; const exist=JSON.parse(localStorage.getItem(key)||'[]'); exist.push(rec); localStorage.setItem(key, JSON.stringify(exist));
+  $$('input[type="radio"]').forEach(el=>el.disabled=true); $('#submitBtn').disabled=true; sendToSheets(rec);
+}}
+function saveDraft(){{const draft={{}}; [...trueFalse.map(t=>t.id),...multipleChoice.map(m=>m.id)].forEach(id=>{{const c=$(`input[name="${id}"]:checked`); draft[id]=c?c.value:null}}); draft.unit=$('#unit').value.trim(); draft.name=$('#name').value.trim(); draft.attempt=$('#attempt').value; localStorage.setItem('quiz-draft', JSON.stringify(draft)); alert('已暫存至本機');}}
+function restoreDraft(){{const s=localStorage.getItem('quiz-draft'); if(!s) return; try{{const d=JSON.parse(s); if(d.unit) $('#unit').value=d.unit; if(d.name) $('#name').value=d.name; if(d.attempt) $('#attempt').value=d.attempt; Object.keys(d).forEach(id=>{{if(id.startsWith('T')||id.startsWith('S')){{const v=d[id]; if(v!==null){{const el=document.querySelector(`input[name="${id}"][value="${v}"]`); if(el) el.checked=true;}}}}}});}}catch(e){{}}}}
+function loadLast(){{const s=localStorage.getItem('quiz-draft'); if(!s){{alert('找不到上次暫存的作答資料。');return}} start();}}
+function clearAnswers(){{if(!confirm('確定要清除目前作答嗎？')) return; $$('input[type="radio"]').forEach(el=>el.checked=false); localStorage.removeItem('quiz-draft');}}
+function exportCSV(){{const key='quiz-records'; const data=JSON.parse(localStorage.getItem(key)||'[]'); if(!data.length){{alert('目前沒有可下載的成績資料。');return}} const header=['單位','姓名','批次','得分','是否及格','答對題數','總題數','作答秒數','測驗名稱']; const lines=[header.join(',')]; data.forEach(r=>{{lines.push([r.unit,r.name,r.attempt,r.score,r.pass?'是':'否',r.correct,r.total,r.spentSec,r.quizName||''].map(x=>`"${String(x).replace(/"/g,'""')}"`).join(','))}}); const blob=new Blob(["\ufeff"+lines.join('\n')],{{type:'text/csv;charset=utf-8;'}}); const url=URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download= QUIZ_NAME.replace(/\s+/g,'_') + '_成績.csv'; a.click(); URL.revokeObjectURL(url);}}
 
-document.addEventListener('DOMContentLoaded',()=>{$('#startBtn').addEventListener('click',start); $('#loadLastBtn').addEventListener('click',loadLast); $('#submitBtn').addEventListener('click',submit); $('#saveDraftBtn').addEventListener('click',saveDraft); $('#clearBtn').addEventListener('click',clearAnswers); $('#exportBtn').addEventListener('click',exportCSV); $('#toggleExplain').addEventListener('change',e=>state.explain=e.target.checked); $('#shuffleOrder').addEventListener('change',e=>{state.shuffle=e.target.checked;render()}); $('#passScore').addEventListener('change',e=>state.passScore=parseInt(e.target.value||'60',10)||60); });
+document.addEventListener('DOMContentLoaded',()=>{{$('#startBtn').addEventListener('click',start); $('#loadLastBtn').addEventListener('click',loadLast); $('#submitBtn').addEventListener('click',submit); $('#saveDraftBtn').addEventListener('click',saveDraft); $('#clearBtn').addEventListener('click',clearAnswers); $('#exportBtn').addEventListener('click',exportCSV); $('#toggleExplain').addEventListener('change',e=>state.explain=e.target.checked); $('#shuffleOrder').addEventListener('change',e=>{{state.shuffle=e.target.checked;render()}}); $('#passScore').addEventListener('change',e=>state.passScore=parseInt(e.target.value||'60',10)||60); render();}});
 </script>
 </body>
 </html>
